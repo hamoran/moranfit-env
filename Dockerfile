@@ -15,7 +15,7 @@ RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wh
 
 RUN cd /home && \
     git clone https://github.com/Tabor-Research-Group/Reinvent
-ENV PYTHONPATH=/home
+ENV PYTHONPATH=/home/Reinvent
 
 # Set the default shell to use bash and activate the conda environment
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "reinvent.v3.2"]
