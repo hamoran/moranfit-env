@@ -13,6 +13,9 @@ RUN conda install -n base -c conda-forge mamba && \
 RUN conda run -n reinvent.v3.2 python -m ensurepip --upgrade
 RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wheel
 
+RUN conda create "python>=3.8,<3.10" -n aizynth && \
+    conda run -n aizynth python -m pip install aizynthfinder
+
 RUN git clone https://github.com/connorcoley/scscore && \
     cd scscore && \
     conda develop ./
