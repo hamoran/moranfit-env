@@ -18,8 +18,6 @@ RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wh
 RUN conda create "python>=3.8,<3.10" -n aizynth && \
     conda run -n aizynth python -m pip install aizynthfinder
 
-RUN conda run -n reinvent.v3.2 python -m pip install git+https://github.com/connorcoley/scscore
-
 RUN cd /home && \
     git clone -b plugins https://github.com/Tabor-Research-Group/Reinvent && \
     git clone -b plugins https://github.com/connorcoley/scscore
