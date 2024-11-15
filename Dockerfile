@@ -13,6 +13,10 @@ RUN conda install -n base -c conda-forge mamba && \
 RUN conda run -n reinvent.v3.2 python -m ensurepip --upgrade
 RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wheel
 
+RUN git clone https://github.com/connorcoley/scscore && \
+    cd scscore && \
+    conda develop ./
+
 RUN cd /home && \
     git clone -b plugins https://github.com/Tabor-Research-Group/Reinvent
 ENV PYTHONPATH=/home/Reinvent
