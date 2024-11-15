@@ -16,13 +16,14 @@ RUN conda install -n base -c conda-forge mamba && \
 # Install pip manually in case it is missing in the environment
 RUN conda run -n reinvent.v3.2 python -m ensurepip --upgrade
 RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wheel
+RUN conda install -n reinvent.v3.2 conda-build
 
 RUN conda create "python>=3.8,<3.10" -n aizynth && \
     conda run -n aizynth python -m pip install aizynthfinder
 
 RUN git clone https://github.com/connorcoley/scscore && \
     cd scscore && \
-    conda develop ./
+    conda -n reinvent.v3.2 develop ./
 
 RUN cd /home && \
     git clone -b plugins https://github.com/Tabor-Research-Group/Reinvent
