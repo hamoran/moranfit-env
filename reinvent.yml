@@ -9,6 +9,7 @@ dependencies:
   - pytorch-cuda
   - tensorflow
   - pathos
+  - alfabet
   - pandas
   - scipy
   - h5py
