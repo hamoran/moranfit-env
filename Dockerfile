@@ -9,6 +9,8 @@ RUN apt-get update && \
 # Copy the reinvent.yml file into the Docker image
 COPY reinvent.yml .
 
+RUN conda create -f reinvent.yml
+
 # Install pip manually in case it is missing in the environment
 RUN conda run -n reinvent.v3.2 python -m ensurepip --upgrade
 RUN conda run -n reinvent.v3.2 python -m pip install --upgrade pip setuptools wheel
