@@ -9,7 +9,6 @@ dependencies:
   - pytorch-cuda
   - tensorflow
   - pathos
-  - alfabet
   - pandas
   - scipy
   - h5py
@@ -17,6 +16,7 @@ dependencies:
   - pip
   - pip:
       - rdkit
+      - alfabet
       - git+https://github.com/Tabor-Research-Group/reinvent-chemistry
       - git+https://github.com/Tabor-Research-Group/reinvent-models
       - git+https://github.com/Tabor-Research-Group/reinvent-scoring
