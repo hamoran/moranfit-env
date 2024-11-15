@@ -1,6 +1,10 @@
 # Use the official Miniconda image
 FROM continuumio/miniconda3:latest
 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && \
+    apt-get -y install git gcc g++ && \
+    rm -rf /var/lib/apt/lists/*
 
 # Copy the reinvent.yml file into the Docker image
 COPY reinvent.yml .
