@@ -4,16 +4,25 @@ channels:
   - pytorch
   - anaconda
   - defaults
+  - conda-forge
+  - openeye
 dependencies:
   - python=3.10
   - pytorch-cuda
   - tensorflow
   - pathos
+  - numpy
   - pandas
   - scipy
   - h5py
   - ipykernel
   - scikit-learn
+  - chemprop
+  - pydantic
+  - dacite
+  - openeye-toolkits
+  - django
+  - tqdm
   - pip
   - pip:
       - rdkit
