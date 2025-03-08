@@ -21,7 +21,7 @@ RUN conda create "python>=3.8,<3.10" -n aizynth && \
 RUN cd /home && \
     git clone -b plugins https://github.com/Tabor-Research-Group/Reinvent && \
     git clone https://github.com/connorcoley/scscore
-ENV PYTHONPATH=/home/Reinvent/ReinventQC:/home/scscore
+ENV PYTHONPATH=/home/Reinvent:/home/scscore
 
 # Set the default shell to use bash and activate the conda environment
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "reinvent.v3.2"]

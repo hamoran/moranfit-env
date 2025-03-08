@@ -21,11 +21,9 @@ dependencies:
   - pydantic
   - dacite
   - openeye-toolkits
-  - django
-  - tqdm
   - pip
+  - rdkit
   - pip:
-      - rdkit
       - git+https://github.com/Tabor-Research-Group/reinvent-chemistry
       - git+https://github.com/Tabor-Research-Group/reinvent-models
       - git+https://github.com/Tabor-Research-Group/reinvent-scoring
