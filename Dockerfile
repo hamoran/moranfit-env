@@ -21,4 +21,8 @@ RUN conda run -n gpyopt3 python -m pip install --upgrade pip setuptools wheel
 #ENV PYTHONPATH=/home/Reinvent:/home/scscore
 
 # Set the default shell to use bash and activate the conda environment
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "gpyopt3"]
+#ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "gpyopt3"]
+# ChatGPT Suggestions
+SHELL ["/bin/bash", "-c"]
+ENTRYPOINT ["bash", "-c", "source activate gpyopt3 && exec \"$@\"", "--"]
+
