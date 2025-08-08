@@ -1,6 +1,6 @@
-# reinvent-env
+# moranfit-env
 
-Containerized environment for Reinvent
+Containerized environment for MoranFit Code
 
 To install on Grace, run
 
@@ -8,5 +8,5 @@ To install on Grace, run
 module load WebProxy
 username="$(whoami)"
 export SINGULARITY_CACHEDIR="/scratch/user/$username/.singularity/cache"
-singularity pull docker://ghcr.io/tabor-research-group/reinvent-env:latest
+singularity pull docker://ghcr.io/hamoran/moranfit-env:latest
 ```
