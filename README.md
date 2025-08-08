@@ -1,6 +1,6 @@
-# reinvent-env
+# moranfit-env
 
-Containerized environment for Reinvent
+Containerized environment for MoranFit Code
 
 To install on Grace, run
 
